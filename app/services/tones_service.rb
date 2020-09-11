@@ -1,6 +1,6 @@
 class TonesService
 
-  def self.find_tones_of_poem(poems)
+  def self.find_tones_of_poems(poems)
     poems.each do |poem|
       lines = poem.lines.join(', ')
       response = conn.get("/v3/tone") do |req|
